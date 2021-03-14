@@ -1,0 +1,75 @@
+{
+    "data":[
+        {
+            "code":"56123",
+            "image":"https://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg",
+            "name":"Big Pizza",
+            "qty":"4",
+            "price":"73"
+          },
+          {
+            "code":"52423",
+            "image":"https://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg",
+            "name":"Big Pizza",
+            "qty":"6",
+            "price":"73"
+          },
+          {
+            "code":"33343",
+            "image":"https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "name":"Mixed Pizza",
+            "qty":"50",
+            "price":"104"
+          },
+          {
+            "code":"35343",
+            "image":"https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "name":"Mixed Pizza",
+            "qty":"30",
+            "price":"173"
+          },
+          {
+            "code":"54423",
+            "image":"https://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg",
+            "name":"Big Pizza",
+            "qty":"6",
+            "price":"73"
+          },
+          {
+            "code":"35043",
+            "image":"https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "name":"Mixed Pizza",
+            "qty":"50",
+            "price":"104"
+          },
+          {
+            "code":"16423",
+            "image":"https://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg",
+            "name":"Big Pizza",
+            "qty":"6",
+            "price":"73"
+          },
+          {
+            "code":"35373",
+            "image":"https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "name":"Mixed Pizza",
+            "qty":"50",
+            "price":"104"
+          },
+          {
+            "code":"56323",
+            "image":"https://www.delonghi.com/Global/recipes/multifry/pizza_fresca.jpg",
+            "name":"Big Pizza",
+            "qty":"6",
+            "price":"73"
+          },
+          {
+            "code":"30043",
+            "image":"https://images.pexels.com/photos/2741457/pexels-photo-2741457.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+            "name":"Mixed Pizza",
+            "qty":"50",
+            "price":"104"
+          }
+
+    ]
+}

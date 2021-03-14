@@ -1,0 +1,55 @@
+<div class="container mrt-40">
+    <div class="row">
+        <div class="col-md d-flex align-items-center">
+            <div class="text-dark weight-700 size-8">All Products</div>
+        </div>
+        <div class="col-md d-flex align-items-center justify-content-end">
+            <button class="btn btn-primary text-white border-raduis-5 size-6 p-4 w-100 max-140" (click)="addProduct()">
+                Add product
+            </button>
+        </div>
+        <div class="col-12">
+            <div class="border-radius-5 box-shadow mrt-16 mrb-30">
+                <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Code</th>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Image</th>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Name</th>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Quantity</th>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Price</th>
+                          <th scope="col" class="text-secondary size-6 weight-600 pt-12 pb-8 pse-8">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of products;let i = index;">
+                            <td class="align-middle ptb-16 pse-8 size-6 text-gray1 weight-700" >
+                                {{item?.code}}
+                              </td>
+                          <td class="align-middle ptb-16 pse-8" >
+                            <div class="d-flex align-items-center cursor-pointer ">
+                              <img src={{item.image}} alt="" class="max-50 w-100 border-radius-5 item-image">
+                            </div>
+                          </td>
+                          <td class="align-middle size-6 text-dark weight-700 ptb-16 pse-8">{{item?.name}} </td>
+                          <td class="align-middle ptb-16 pse-8 size-6 text-dark weight-700 ">
+                            {{ item?.qty }}
+                          </td>
+                          <td class="align-middle ptb-16 pse-8 size-6 text-dark weight-700">
+                            {{ item?.price }}
+                          </td>
+                          <td class="align-middle ptb-16 pse-8" >
+                              <div (click)="deleteItem(i)"
+                                class="d-flex align-items-center justify-content-start ptb-4 pse-5 cursor-pointer">
+                                <img src="../../../../assets/images/trash.svg" alt="" class="max-20 w-100">
+                              </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

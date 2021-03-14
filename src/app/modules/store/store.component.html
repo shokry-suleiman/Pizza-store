@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row mrtb-40">
+        <div class="col-md-3" *ngFor="let product of products">
+            <store-product [price]="product?.price" [name]="product?.name" [image]="product?.image" [qty]="product?.qty" [code]="product?.code"></store-product>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+<div class="text-dark size-8 text-center weight-700 position-relative mrb-20">Add Product
+    <div class="position-absolute top-0 end-0" (click)="closeDialog()">
+        <img src="../../../../assets/images/close.svg" alt="" class="cursor-pointer max-20 w-100">
+    </div>
+</div>
+<form [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <input style="display: none;" #fileImage type="file" accept="image/*" class="btn btn-danger"
+        (change)="onFileChangeImage($event)" formControlName="image" />
+    <img src="../../../../assets/images/empty-image.svg" alt=""
+        class="w-100 max-70 d-flex align-items-center m-auto mrb-16 cursor-pointer" (click)="fileImage.click()"
+        *ngIf="!uploadedImage">
+    <img src="{{uploadedImage}}" alt="" class="w-100 max-100 d-flex align-items-center m-auto mrb-16 cursor-pointer"
+        (click)="fileImage.click()" *ngIf="uploadedImage">
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="mb-3">
+                <label for="name" class="form-label text-dark weight-600">Name</label>
+                <input type="text" class="form-control bg-gray2 border-0" id="name" formControlName="name"
+                    [class.is-invalid]="name?.invalid && (name?.dirty ||name?.touched)" placeholder="Enter name">
+                <div class="invalid-feedback" *ngIf="name?.dirty || name?.touched">
+                    <p *ngIf="name?.errors?.required">
+                        Name required
+                    </p>
+                    <p *ngIf="name?.errors?.minlength">
+                        Name should be 4 or more
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label for="code" class="form-label text-dark weight-600">Code</label>
+            <input type="text" class="form-control bg-gray2 border-0" id="code" formControlName="code"
+                [class.is-invalid]="code?.invalid && (code?.dirty ||code?.touched)" placeholder="Enter code">
+            <div class="invalid-feedback" *ngIf="code?.dirty || code?.touched">
+                <p *ngIf="code?.errors?.required">
+                    Code required
+                </p>
+                <p *ngIf="code?.errors?.minlength">
+                    Code should be 4 or more
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3">
+                <label for="qty" class="form-label text-dark weight-600">Quantity</label>
+                <input type="number" class="form-control bg-gray2 border-0" id="qty" formControlName="qty"
+                    [class.is-invalid]="qty?.invalid && (qty?.dirty ||qty?.touched)" placeholder="Enter quantity">
+                <div class="invalid-feedback" *ngIf="qty?.dirty || qty?.touched">
+                    <p *ngIf="qty?.errors?.required">
+                        Quantity required
+                    </p>
+                    <p *ngIf="qty?.errors?.min">
+                        Quantity minimum value 0
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="mb-3">
+                <label for="price" class="form-label text-dark weight-600">Price</label>
+                <input type="price" class="form-control bg-gray2 border-0" id="price" formControlName="price"
+                    [class.is-invalid]="price?.invalid && (price?.dirty ||price?.touched)" placeholder="Enter price">
+                <div class="invalid-feedback" *ngIf="price?.dirty || price?.touched">
+                    <p *ngIf="price?.errors?.required">
+                        Price required
+                    </p>
+                    <p *ngIf="price?.errors?.min">
+                        Price minimum value 0
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <button
+                class="btn btn-primary text-white border-raduis-5 size-6 p-4 w-100 max-280 text-center mrt-10 weight-500"
+                (click)="addProduct()" type="submit" [disabled]="productForm.invalid || isSubmitting">
+                Add product
+            </button>
+        </div>
+    </div>
+</form>
